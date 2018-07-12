@@ -31,7 +31,8 @@ Tests are written in `test/test.ts`. Run `make test` to run them.
 Some notes:
 
 - It should be possible to decipher the meaning of every part of this project using comments, code search, and Google. Feel free to ask a question by [filing an issue](https://github.com/lgarron/libTemplate/issues) if you are wondering why something is/isn't structured in a particular way.
-- `dist/libTemplate.js` is a [UMD module](https://github.com/umdjs/umd). That roughly means it can be used in the browser as well as in `node`.
+- For a larger project based on this template, see [`alg.js`](https://github.com/cubing/alg.js).
+- `dist/libTemplate.js` is a [UMD module](https://github.com/umdjs/umd). That roughly means it can be used in the browser directly as well as in `node`.
 - This module is set up for building a library, but can be adapted for commandline tools. You can also run `node dist/libTemplate.js` directly.
 - The output file name (`libTemplate.js`) is taken from `package.json` → `name`, but can be configured directly in `webpack-config.json` if needed.
 - This library can be used in other projects like this project itself uses `alg`. You can either:
