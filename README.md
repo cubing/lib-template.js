@@ -24,7 +24,7 @@ To build the output file continuously while working on input files, run `make de
 
 Source files are in `src`. They are compiled into `dist/libTemplate.js` using [Webpack](https://webpack.js.org/).
 
-`dist` will also contain an additional `d.ts` TypeScript definition file for each source file, as well as a `libTemplate.js.map` [source map](https://www.html5rocks.com/en/tutorials/developertools/sourcemaps/) for debugging.
+`dist` will also contain an additional `.d.ts` TypeScript definition file for each source file, as well as a `libTemplate.js.map` [source map](https://www.html5rocks.com/en/tutorials/developertools/sourcemaps/) for debugging.
 
 Tests are written in `test/test.ts`. Run `make test` to run them.
 
