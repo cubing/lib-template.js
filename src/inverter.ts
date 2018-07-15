@@ -1,8 +1,8 @@
-import {Algorithm, invert, algToString, parse} from "alg"
+import {Sequence, invert, algToString, parse} from "alg"
 
 export class Inverter {
   public inversionCount = 0;
-  protected alg: Algorithm;
+  protected alg: Sequence;
   constructor(s: string) {
     this.alg = parse(s);
   }
