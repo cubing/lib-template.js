@@ -9,7 +9,7 @@ dev:
 	${NODE_BIN}/webpack-cli --watch
 
 .PHONY: test
-test: dist
+test:
 	${NODE_BIN}/mocha -r ts-node/register test/*.ts
 
 clean:
