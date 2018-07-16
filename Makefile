@@ -1,7 +1,7 @@
 NODE_BIN = ./node_modules/.bin
 
 .PHONY: dist
-dist:
+dist: clean-dist
 	env PROD=true ${NODE_BIN}/webpack-cli
 
 .PHONY: dev
@@ -13,5 +13,8 @@ test:
 	${NODE_BIN}/mocha -r ts-node/register test/*.ts
 
 .PHONY: clean
-clean:
+clean: clean-dist
+
+.PHONY: clean-dist
+clean-dist:
 	rm -rf ./dist
