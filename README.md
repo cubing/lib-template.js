@@ -45,7 +45,8 @@ Some notes:
 
 # Release Process
 
-1) Update versions for `dependencies` in `package.json` if needed.
+1) Update versions for `dependencies` in `package.json` if needed
+  - Then run `yarn install` to update that dependency in `yarn.lock`.
 2) Update `version` in `package.json`.
 3) `git commit` with a summary of user-facing changes.
 4) `git tag [version]`
