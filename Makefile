@@ -12,5 +12,6 @@ dev:
 test:
 	${NODE_BIN}/mocha -r ts-node/register test/*.ts
 
+.PHONY: clean
 clean:
 	rm -rf ./dist
