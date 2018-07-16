@@ -42,3 +42,14 @@ Some notes:
 - TypeScript has some nice autocompletion support in many editors. Make sure to install it!
 - This project has a `.travis.yml` file you can use to automatically test every commit you push to GitHub (with `make test`), using [Travis CI](https://travis-ci.org/). If you want this, you'll need to log into Travis CI and set it up for the repo. See [this page](https://travis-ci.org/lgarron/libTemplate) for an example.
 - Yes, `node_modules` is expected to contain over 10,000 files. That's apparently how modern JS development is done these days. 🤷‍♀️
+
+# Release Process
+
+1) Update versions for `dependencies` in `package.json` if needed.
+2) Update `version` in `package.json`.
+3) `git commit` with a summary of user-facing changes.
+4) `git tag [version]`
+5) `git push`
+6) `npm publish`
+  - This template has a `prepublishOnly` script that runs `make dist`. Make sure that `make dist` will produce a production build from any state of the project.
+  - Or `yarn publish` once <https://github.com/yarnpkg/yarn/issues/4904> is fixed.
