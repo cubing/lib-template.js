@@ -14,6 +14,7 @@ test:
 
 .PHONY: clean
 clean: clean-dist
+	rm -f yarn-error.log
 
 .PHONY: clean-dist
 clean-dist:
