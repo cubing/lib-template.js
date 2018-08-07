@@ -1,8 +1,10 @@
 <html>
+<head>
   <title>libTemplate.js Test</title>
   <!-- We have to include `alg.js` here separately, since `alg` is defined in `externals` in `webpack.config.js` -->
   <script src="../../node_modules/alg/dist/alg.js"></script>
   <script src="../../dist/lib-template.js"></script>
+</head>
 <body>
 
 This shows a quick-n-dirty way to use <code>libTemplate.js</code> from the browser directly. For an actual app, you'd probably want to use a bundle with all the dependencies included. Note that you have to build the library (e.g. using <code>make dist</code>) in this project before this file will work.
@@ -40,5 +42,5 @@ function set() {
 
 displayAlg();
 </script>
-<body>
+</body>
 </html>
