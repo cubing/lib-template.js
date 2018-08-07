@@ -1,12 +1,13 @@
 {
-  "name": "libTemplate",
+  "name": "lib-template",
+  "umdName": "libTemplate",
+  "main": "./dist/lib-template.js",
   "version": "0.0.1",
   "description": "Template for interacting with cubing JS libraries.",
   "author": "Lucas Garron <code@garron.net> (https://garron.net/)",
   "license": "MIT",
   "repository": "github:cubing/libTemplate.js",
   "bugs": {"url" : "https://github.com/cubing/libTemplate.js/issues"},
-  "main": "./dist/libTemplate.js",
   "types": "./dist/index.d.ts",
   "dependencies": {
     "alg": "^0.9.8"
