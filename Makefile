@@ -10,7 +10,7 @@ dev:
 
 .PHONY: test
 test:
-	${NODE_BIN}/mocha -r ts-node/register test/*.ts
+	npm test
 
 .PHONY: clean
 clean: clean-dist
