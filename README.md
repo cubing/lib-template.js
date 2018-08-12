@@ -32,9 +32,9 @@ Some notes:
 
 - It should be possible to decipher the meaning of every part of this project using comments, code search, and Google. Feel free to ask a question by [filing an issue](https://github.com/cubing/lib-template.js/issues) if you are wondering why something is/isn't structured in a particular way.
 - For a larger project based on this template, see [`alg.js`](https://github.com/cubing/alg.js).
-- `dist/lib-template.js` is a [UMD module](https://github.com/umdjs/umd). That roughly means it can be used in the browser directly as well as in `node`.
+- `dist/lib-template.js` is a [UMD module](https://github.com/umdjs/umd). That roughly means it can be used in the browser directly as well as in `node`. To set the name use by the library as a UMD module, set `package.json` → `umdName`.
 - This module is set up for building a library, but can be adapted for commandline tools. You can also run `node dist/lib-template.js` directly.
-- The output file name (`lib-template.js`) is taken from `package.json` → `name`, but can be configured directly in `webpack-config.json` if needed.
+- The output file name (`lib-template.js`) is taken from `package.json` → `main`, but can be configured directly in `webpack-config.json` if needed.
 - This library can be used in other projects like this project itself uses `alg`. You can either:
   - Publish to `npm`.
   - Include this project as a `node_modules` folder in another project.
