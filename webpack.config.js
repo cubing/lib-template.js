@@ -24,6 +24,10 @@ module.exports = {
   module: {
     rules: [
       {
+        loader: 'babel-loader',
+        options: {"presets": ["env"]}
+      },
+      {
         test: /\.ts$/,
         use: "ts-loader",
         exclude: /node_modules/
