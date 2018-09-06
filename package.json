@@ -5,7 +5,7 @@
   "version": "0.0.1",
   "description": "Template for interacting with cubing JS libraries.",
   "author": "Lucas Garron <code@garron.net> (https://garron.net/)",
-  "license": "MIT",
+  "license": "(MIT OR GPL-3.0-or-later)",
   "repository": "github:cubing/lib-template.js",
   "bugs": {
     "url": "https://github.com/cubing/lib-template.js/issues"
