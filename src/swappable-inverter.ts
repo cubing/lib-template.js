@@ -1,8 +1,8 @@
-import {Inverter} from "./inverter"
-import {parse} from "alg"
+import {parse} from "alg";
+import {Inverter} from "./inverter";
 
 export class SwappableInverter extends Inverter {
-  swap(s: string) {
+  public swap(s: string) {
     this.alg = parse(s);
   }
 }

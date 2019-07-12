@@ -1,51 +1,43 @@
 {
   "name": "lib-template",
   "umdName": "libTemplate",
-  "main": "./dist/lib-template.js",
+  "main": "./dist/cjs/index.js",
+  "umd": "./dist/umd/lib-template.umd.js",
   "version": "0.0.1",
   "description": "Template for interacting with cubing JS libraries.",
   "author": "Lucas Garron <code@garron.net> (https://garron.net/)",
   "license": "(MIT OR GPL-3.0-or-later)",
   "repository": "github:cubing/lib-template.js",
-  "bugs": {
-    "url": "https://github.com/cubing/lib-template.js/issues"
-  },
   "types": "./dist/index.d.ts",
   "dependencies": {
-    "alg": "^0.9.8"
+    "alg": "^0.9.23"
   },
-  "externalsForWebpack": [
+  "externalDependencies": [
     "alg"
   ],
+  "umdGlobals": {
+    "alg": "alg"
+  },
   "devDependencies": {
-    "@types/jest": "^23.3.1",
-    "babel-loader": "^7.1.5",
-    "babel-preset-env": "^1.7.0",
-    "jest": "^23.5.0",
-    "ts-jest": "^23.1.3",
-    "ts-loader": "^4.4.2",
-    "ts-node": "^7.0.0",
-    "typescript": "^2.9.2",
-    "webpack": "^4.12.2",
-    "webpack-cli": "^3.0.8",
-    "webpack-notifier": "^1.6.0"
+    "@babel/core": "^7.5.0",
+    "@babel/preset-env": "^7.5.2",
+    "@types/jest": "^24.0.15",
+    "jest": "^24.8.0",
+    "rollup": "^1.16.3",
+    "rollup-plugin-terser": "^5.0.0",
+    "rollup-plugin-tslint": "^0.2.2",
+    "rollup-plugin-typescript2": "^0.21.2",
+    "ts-jest": "^24.0.2",
+    "tslint": "^5.18.0",
+    "typescript": "^3.5.2"
   },
   "scripts": {
-    "test": "jest",
-    "prepublishOnly": "make dist"
-  },
-  "jest": {
-    "transform": {
-      "^.+\\.tsx?$": "ts-jest"
-    },
-    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js",
-      "jsx",
-      "json",
-      "node"
-    ]
+    "build": "rollup -c",
+    "dev": "rollup -cw",
+    "clean": "rm -rf dist",
+    "test": "jest && npm run lint",
+    "setup": "npm install",
+    "lint": "tslint --fix --project . ; tslint --fix rollup.config.js",
+    "prepack": "npm run clean && npm run build"
   }
 }

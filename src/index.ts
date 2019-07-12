@@ -1,7 +1,7 @@
 export {
-  Inverter
-} from "./inverter"
+  Inverter,
+} from "./inverter";
 
 export {
-  SwappableInverter
-} from "./swappable-inverter"
+  SwappableInverter,
+} from "./swappable-inverter";

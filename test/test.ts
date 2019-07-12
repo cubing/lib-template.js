@@ -2,7 +2,7 @@ import {Inverter} from "../src/inverter"
 import {SwappableInverter} from "../src/swappable-inverter"
 
 describe("Inverter", () => {
-  it("should invert", () => {
+  test("should invert", () => {
     var inverter = new Inverter("R U'");
     inverter.invert();
     expect(inverter.getAlg()).toBe("U R'");
@@ -14,7 +14,7 @@ describe("Inverter", () => {
 });
 
 describe("SwappableInverter", () => {
-  it("should allow swapping without resetting count", () => {
+  test("should allow swapping without resetting count", () => {
     var inverter = new SwappableInverter("R U'");
     inverter.invert();
     expect(inverter.getAlg()).toBe("U R'");

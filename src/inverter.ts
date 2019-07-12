@@ -1,4 +1,4 @@
-import {Sequence, invert, algToString, parse} from "alg"
+import {algToString, invert, parse, Sequence} from "alg";
 
 export class Inverter {
   public inversionCount = 0;
@@ -7,12 +7,12 @@ export class Inverter {
     this.alg = parse(s);
   }
 
-  invert(): void {
+  public invert(): void {
     this.alg = invert(this.alg);
     this.inversionCount += 1;
   }
 
-  getAlg(): string {
+  public getAlg(): string {
     return algToString(this.alg);
   }
 }

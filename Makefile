@@ -1,21 +1,6 @@
-NODE_BIN = ./node_modules/.bin
+# Note: the first command becomes the default `make` target.
+NPM_COMMANDS = build dev test lint setup print-schemas clean
 
-.PHONY: dist
-dist: clean-dist
-	env PROD=true ${NODE_BIN}/webpack-cli
-
-.PHONY: dev
-dev:
-	${NODE_BIN}/webpack-cli --watch
-
-.PHONY: test
-test:
-	npm test
-
-.PHONY: clean
-clean: clean-dist
-	rm -f yarn-error.log
-
-.PHONY: clean-dist
-clean-dist:
-	rm -rf ./dist
+.PHONY: $(NPM_COMMANDS)
+$(NPM_COMMANDS):
+	npm run $@
